@@ -305,11 +305,19 @@ class MedZone_Lite_Dashboard_Setup {
 				),
 			),
 			array(
-				'id' 		=> 'medzone-check-kaliforms',
-				'title'     	=> MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'title', 'Kali Forms' ),
-				'description'   => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'description', 'Kali Forms' ),
-				'plugin_slug'	=> 'kali-forms',
-				'check'		=> defined( 'KALIFORMS_VERSION' ),
+				'id'          => 'medzone-check-cf7',
+				'title'       => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'title', 'Kali Forms' ),
+				'description' => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'description', 'Kali Forms' ),
+				'plugin_slug' => 'kali-forms',
+				'state'       => false,
+				'check'       => defined( 'KALIFORMS_VERSION' ),
+				'actions'     => array(
+					array(
+						'label'   => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'installed', 'Kali Forms' ) ? __( 'Activate Plugin', 'medzone-lite' ) : __( 'Install Plugin', 'medzone-lite' ),
+						'type'    => 'handle-plugin',
+						'handler' => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'installed', 'Kali Forms', 'verify_cf7' ),
+					),
+				),
 			),
 		);
 	}
@@ -327,11 +335,11 @@ class MedZone_Lite_Dashboard_Setup {
 				'help'        => '<a class="button button-primary" id="" href="' . esc_url( admin_url( sprintf( 'themes.php?page=%1$s-dashboard', 'medzone-lite' ) ) ) . '">' . __( 'Import Demo Content', 'medzone-lite' ) . '</a>',
 			),
 			array(
-				'id'          => 'medzone-check-cf7',
-				'title'       => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'title', 'Contact Form 7', 'verify_cf7' ),
-				'description' => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'description', 'Contact Form 7', 'verify_cf7' ),
-				'plugin_slug' => 'contact-form-7',
-				'check'       => defined( 'WPCF7_VERSION' ),
+				'id' 			=> 'medzone-check-kaliforms',
+				'title'     	=> MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'title', 'Kali Forms' ),
+				'description'   => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'description', 'Kali Forms' ),
+				'plugin_slug'	=> 'kali-forms',
+				'check'			=> defined( 'KALIFORMS_VERSION' ),
 			),
 		);
 	}
