@@ -305,7 +305,7 @@ class MedZone_Lite_Dashboard_Setup {
 				),
 			),
 			array(
-				'id'          => 'medzone-check-cf7',
+				'id'          => 'medzone-check-kali-forms',
 				'title'       => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'title', 'Kali Forms' ),
 				'description' => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'description', 'Kali Forms' ),
 				'plugin_slug' => 'kali-forms',
@@ -315,7 +315,7 @@ class MedZone_Lite_Dashboard_Setup {
 					array(
 						'label'   => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'installed', 'Kali Forms' ) ? __( 'Activate Plugin', 'medzone-lite' ) : __( 'Install Plugin', 'medzone-lite' ),
 						'type'    => 'handle-plugin',
-						'handler' => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'installed', 'Kali Forms', 'verify_cf7' ),
+						'handler' => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'installed', 'Kali Forms' ),
 					),
 				),
 			),
