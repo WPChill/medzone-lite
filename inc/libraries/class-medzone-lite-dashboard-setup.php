@@ -253,7 +253,7 @@ class MedZone_Lite_Dashboard_Setup {
 	 */
 	public function get_plugins( $integrated = false ) {
 		$arr = array(
-			'contact-form-7' => array(
+			'kali-forms' => array(
 				'integration' => true,
 				'recommended' => false,
 			),
@@ -275,7 +275,7 @@ class MedZone_Lite_Dashboard_Setup {
 		);
 
 		if ( ! $integrated ) {
-			unset( $arr['contact-form-7'] );
+			unset( $arr['kali-forms'] );
 		}
 
 		return $arr;
@@ -305,19 +305,11 @@ class MedZone_Lite_Dashboard_Setup {
 				),
 			),
 			array(
-				'id'          => 'medzone-check-cf7',
-				'title'       => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'title', 'Contact Form 7', 'verify_cf7' ),
-				'description' => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'description', 'Contact Form 7', 'verify_cf7' ),
-				'plugin_slug' => 'contact-form-7',
-				'state'       => false,
-				'check'       => defined( 'WPCF7_VERSION' ),
-				'actions'     => array(
-					array(
-						'label'   => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ) ? __( 'Activate Plugin', 'medzone-lite' ) : __( 'Install Plugin', 'medzone-lite' ),
-						'type'    => 'handle-plugin',
-						'handler' => MedZone_Lite_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ),
-					),
-				),
+				'id' 		=> 'medzone-check-kaliforms',
+				'title'     	=> MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'title', 'Kali Forms' ),
+				'description'   => MedZone_Lite_Notify_System::plugin_verifier( 'kali-forms', 'description', 'Kali Forms' ),
+				'plugin_slug'	=> 'kali-forms',
+				'check'		=> defined( 'KALIFORMS_VERSION' ),
 			),
 		);
 	}
