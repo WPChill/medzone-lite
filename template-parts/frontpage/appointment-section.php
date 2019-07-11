@@ -29,7 +29,7 @@ $fields    = $frontpage->sections[ $section_id ];
 
 				<?php if ( ! empty( $fields['appointment_form'] ) ) { ?>
 
-					<?php echo do_shortcode( '[contact-form-7 id="' . absint( $fields['appointment_form'] ) . '"]' ); ?>
+					<?php echo do_shortcode( '[kaliform id="' . absint( $fields['appointment_form'] ) . '"]' ); ?>
 
 				<?php } ?>
 			</div>
