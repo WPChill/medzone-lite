@@ -230,8 +230,8 @@ class MedZone_Lite_Repeatable_Sections {
 			'description' => esc_html__( 'Contact form for your appointments, you need to have a working CF7 form created.', 'medzone-lite' ),
 			'integration' => array(
 				'status' => true,
-				'plugin' => 'contact-form-7',
-				'check'  => defined( 'WPCF7_VERSION' ),
+				'plugin' => 'kali-forms',
+				'check'  => defined( 'KALIFORMS_VERSION' ),
 			),
 			'image'       => get_template_directory_uri() . '/assets/images/ewf-icon-section-appointments.png',
 			'fields'      => array(
@@ -255,19 +255,19 @@ class MedZone_Lite_Repeatable_Sections {
 					'label'   => esc_html__( 'Appointment form', 'medzone-lite' ),
 					'type'    => 'select',
 					'choices' => array(
-						'' => __( 'Select a Contact Form7 form', 'medzone-lite' ),
+						'' => __( 'Select a Kali Forms form', 'medzone-lite' ),
 					),
 					'default' => '',
 				),
 			),
 		);
 
-		if ( defined( 'WPCF7_VERSION' ) ) {
+		if ( defined( 'KALIFORMS_VERSION' ) ) {
 			/**
 			 * Get cforms, populated appointment_form
 			 */
 			$args = array(
-				'post_type' => 'wpcf7_contact_form',
+				'post_type' => 'kaliforms_forms',
 			);
 
 			$posts = new WP_Query( $args );
