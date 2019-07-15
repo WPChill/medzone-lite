@@ -28,9 +28,11 @@ $fields    = $frontpage->sections[ $section_id ];
 				<?php echo wp_kses_post( $fields['appointment_text'] ); ?>
 
 				<?php if ( ! empty( $fields['appointment_form'] ) ) { ?>
-
-					<?php echo do_shortcode( '[kaliform id="' . absint( $fields['appointment_form'] ) . '"]' ); ?>
-
+					<?php 
+					     echo defined('KALIFORMS_VERSION') 
+						     ? do_shortcode( '[kaliform id="' . absint( $fields['appointment_form'] ) . '"]' ) 
+						     : do_shortcode( '[contact-form-7 id="' . absint( $fields['appointment_form'] ) . '"]' ); 
+					?>
 				<?php } ?>
 			</div>
 		</div>
