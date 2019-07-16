@@ -18,7 +18,7 @@ If you want to build a medicine-related website, MedZone Lite’s features and r
 
 ### License
 
-MedZone Lite WordPress theme, Copyright (C) 2017 https://www.machothemes.com/ 
+MedZone Lite WordPress theme, Copyright (C) 2017 https://www.machothemes.com/
 MedZone Lite WordPress theme is licensed under the GPL3.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License. The exceptions to this license are as follows:
@@ -31,7 +31,7 @@ jQuery bxslider
 	-- Licensed under the MIT license. (https://github.com/stevenwanderski/bxslider-4/blob/master/LICENSE.md)
 Slick
 
-	-- Copyright Ken Wheeler    
+	-- Copyright Ken Wheeler
 	-- Licensed under the MIT license. (https://github.com/kenwheeler/slick/blob/master/LICENSE)
 Font Awesome Code
 
@@ -57,14 +57,14 @@ Hover Intent
 
 	-- Copyright (c) 2007 - 2014 Brian Cherne.
 	-- available for use under the MIT License  http://cherne.net/brian/resources/jquery.hoverIntent.html
-    
+
 #### Fonts
 
 Google Fonts
 
 	-- License: SIL OFL 1.1
 	-- URL: http://scripts.sil.org/OFL
-    
+
 #### Images
 
 	00_header_01  https://pixabay.com/en/nurse-medicine-doctor-hospital-2019420/
@@ -82,16 +82,19 @@ Google Fonts
 
 
 #### Changelog
+	- V1.2.4
+		Added support for Kaliforms
+
 	- V1.1.0
 		Added support for polylang / wpml
-		Reskinned section repeater 
+		Reskinned section repeater
 		Various CSS fixes
-		
+
 	- V1.0.3
 		Update Epsilon Framework
-		  
+
 	- V1.0.2
 		Various bug fixes
-		
+
 	- V1.0.0
 		MedZone Lite - Launch
