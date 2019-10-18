@@ -82,6 +82,9 @@ Google Fonts
 
 
 #### Changelog
+    - V1.2.5
+            Security Fix
+
 	- V1.2.4
 		Added support for Kaliforms
 
