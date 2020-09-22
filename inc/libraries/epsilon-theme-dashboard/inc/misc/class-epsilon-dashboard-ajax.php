@@ -18,10 +18,6 @@ class Epsilon_Dashboard_Ajax {
 			$this,
 			'epsilon_dashboard_ajax_callback',
 		) );
-		add_action( 'wp_ajax_nopriv_epsilon_dashboard_ajax_callback', array(
-			$this,
-			'epsilon_dashboard_ajax_callback',
-		) );
 	}
 
 	/**
@@ -32,12 +28,23 @@ class Epsilon_Dashboard_Ajax {
 			$_POST['args'] = json_decode( wp_unslash( $_POST['args'] ), true );
 		}
 
-		if ( isset( $_POST['args'], $_POST['args']['nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['args']['nonce'] ), 'epsilon_dashboard_nonce' ) ) {
+		if ( !isset( $_POST['args'], $_POST['args']['nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['args']['nonce'] ), 'epsilon_dashboard_nonce' ) ) {
 			wp_die(
 				wp_json_encode(
 					array(
 						'status' => false,
 						'error'  => esc_html__( 'Not allowed', 'epsilon-framework' ),
+					)
+				)
+			);
+		}
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+		    wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Not allowed',
 					)
 				)
 			);
@@ -67,7 +74,7 @@ class Epsilon_Dashboard_Ajax {
 			);
 		}
 
-		$class  = $args_action[0];
+		$class = Epsilon_Dashboard_Ajax::sanitize_class_name( $args_action[0] );
 		$method = $args_action[1];
 		$args   = array();
 
@@ -101,4 +108,20 @@ class Epsilon_Dashboard_Ajax {
 			)
 		);
 	}
+
+
+	/**
+     * Sanitize class name
+     *
+     * @param $args
+     */
+    public static function sanitize_class_name( $class ) {
+        $allowed_classes = array( 'Epsilon_Dashboard_Helper', 'EDD_Theme_Helper', 'Epsilon_Uninstall_Feedback', 'Epsilon_Import_Data' );
+        if ( in_array( $class, $allowed_classes ) ) {
+            return $class;
+        }else{
+            return false;
+        }
+    }
+
 }

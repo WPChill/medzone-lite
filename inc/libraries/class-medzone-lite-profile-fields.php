@@ -19,7 +19,6 @@ class MedZone_Lite_Profile_Fields {
 	 * Sigma_Shop_Profile_Fields constructor.
 	 */
 	public function __construct() {
-		add_filter( 'user_contactmethods', array( $this, 'add_social_media_fields' ), 10, 1 );
 	}
 
 	/**

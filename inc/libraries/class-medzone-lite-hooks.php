@@ -45,10 +45,7 @@ class MedZone_Lite_Hooks {
 		 * Override text domain for the framework
 		 */
 		add_filter( 'override_load_textdomain', array( $this, 'override_load_textdomain' ), 10, 2 );
-		/**
-		 * Allow SVG Uploads
-		 */
-		add_filter( 'upload_mimes', array( $this, 'allow_svg_uploads' ) );
+
 	}
 
 	/**
@@ -148,13 +145,4 @@ class MedZone_Lite_Hooks {
 		return array_merge( $sizes, $custom_sizes );
 	}
 
-	/**
-	 * @param $mimes
-	 *
-	 * @return mixed
-	 */
-	public function allow_svg_uploads( $mimes ) {
-		$mimes['svg'] = 'image/svg+xml';
-		return $mimes;
-	}
 }

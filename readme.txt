@@ -2,7 +2,7 @@
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, sticky-posts, theme-options, threaded-comments, translation-ready
 
 Requires at least:	4.0
-Tested up to:		4.8
+Tested up to:		5.5
 
 ## Description
 
@@ -67,21 +67,24 @@ Google Fonts
 
 #### Images
 
-	00_header_01  https://pixabay.com/en/nurse-medicine-doctor-hospital-2019420/
-	01_our impact  https://pixabay.com/en/blood-pressure-pressure-gauge-1006790/
-	02_appointment  https://pixabay.com/en/isolated-doctor-dentist-dental-care-1188036/
-	03_top experience  https://pixabay.com/en/elderly-corridor-doctor-1461424/
-	04_why choose us  https://pixabay.com/en/experiment-chemistry-liquid-220023/
-	05_doctors_01  https://pixabay.com/en/health-nurse-nursing-1476765/
-	05_doctors_02  https://pixabay.com/en/man-coat-people-laboratory-lab-216989/
-	05_doctors_03  https://pixabay.com/en/dentist-doctor-1191671/
-	05_doctors_04  https://pixabay.com/en/woman-coat-girl-people-laboratory-216988/
-	06_explore hospital  https://pixabay.com/en/asia-assistance-care-for-caretaker-1807539/
-	07_involvment  https://pixabay.com/en/doctor-medical-medicine-health-563429/
-	08_testimonial  https://pixabay.com/en/fashion-woman-clothing-female-1623089/
+	00_header_01  https://pxhere.com/en/photo/1194636
+	01_our impact  https://pxhere.com/en/photo/939949
+	02_appointment  https://www.needpix.com/photo/552830/isolated-doctor-dentist-dental-care-orthodontist-dentistry-doctors-office-oral-hygiene
+	03_top experience  https://pxhere.com/en/photo/603742
+	04_why choose us  https://pxhere.com/en/photo/1245198
+	05_doctors_01  https://pxhere.com/en/photo/599297
+	05_doctors_02  https://pxhere.com/en/photo/1005254
+	05_doctors_03  https://pxhere.com/en/photo/655882
+	05_doctors_04  https://pxhere.com/en/photo/1005258
+	06_explore hospital  https://pxhere.com/en/photo/1026132
+	07_involvment  https://pxhere.com/en/photo/917219
+	08_testimonial  https://pxhere.com/en/photo/527794
 
 
 #### Changelog
+    - V1.2.6
+		Security fixes regarding wp_nonce
+
 	- V1.2.4
 		Added support for Kaliforms
 

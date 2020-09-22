@@ -263,20 +263,11 @@ class MedZone_Lite_Dashboard_Setup {
 				'recommended' => true,
 			),
 
-			'simple-author-box' => array(
+			'strong-testimonials' => array(
 				'integration' => false,
 				'recommended' => true,
 			),
-
-			'kiwi-social-share' => array(
-				'integration' => false,
-				'recommended' => false,
-			),
 		);
-
-		if ( ! $integrated ) {
-			unset( $arr['kali-forms'] );
-		}
 
 		return $arr;
 	}

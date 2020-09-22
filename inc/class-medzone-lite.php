@@ -212,13 +212,6 @@ class MedZone_Lite {
 	}
 
 	/**
-	 * Initiate the user profiles
-	 */
-	public function init_user_profile() {
-		new MedZone_Lite_Profile_Fields();
-	}
-
-	/**
 	 * Loads sidebars and widgets
 	 */
 	public function init_sidebars() {
@@ -230,6 +223,10 @@ class MedZone_Lite {
 	 */
 	public function customize_register_init() {
 		new MedZone_Lite_Customizer();
+	}
+
+	public function init_user_profile() {
+		new MedZone_Lite_Profile_Fields();
 	}
 
 	/**
