@@ -138,7 +138,7 @@
 
         $( '#custom-search-form' ).fadeIn();
         $( '#custom-search-button' ).addClass( 'open' );
-        $( '#custom-search-form #s' ).focus();
+        $( '#custom-search-form #s' ).trigger('focus');
 
       } else {
 
@@ -195,7 +195,7 @@
     $( 'a[href*="#"]' )
 
     // Remove links that don't actually link to anything
-        .not( '[href="#"]' ).not( '[href="#mt-popup-modal"]' ).not( '[href="#0"]' ).click( function( event ) {
+        .not( '[href="#"]' ).not( '[href="#mt-popup-modal"]' ).not( '[href="#0"]' ).on('click', function( event ) {
 
       // On-page links
       if (
@@ -219,12 +219,12 @@
             // Callback after animation
             // Must change focus!
             var $target = $( target );
-            $target.focus();
+            $target.trigger('focus');
             if ( $target.is( ':focus' ) ) { // Checking if the target was focused
               return false;
             } else {
               $target.attr( 'tabindex', '-1' ); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
+              $target.trigger('focus'); // Set focus again
             }
           } );
         }
@@ -433,7 +433,7 @@
    When the window is scrolled, do
    ========================================================================== */
 
-  $( window ).scroll( function() {
+  $( window ).on('scroll', function() {
 
     showHidebackToTop();
 
