@@ -82,6 +82,10 @@ Google Fonts
 
 
 #### Changelog
+	- V1.2.7
+		Minor backend tweaks
+		Jquery Update
+		
     - V1.2.6
 		Security fixes regarding wp_nonce
 

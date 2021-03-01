@@ -267,6 +267,14 @@ class MedZone_Lite_Dashboard_Setup {
 				'integration' => false,
 				'recommended' => true,
 			),
+			'kb-support' => array(
+				'integration' => false,
+				'recommended' => true,
+			),
+			'rsvp' => array(
+				'integration' => false,
+				'recommended' => true,
+			)
 		);
 
 		return $arr;
