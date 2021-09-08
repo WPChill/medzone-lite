@@ -7306,3 +7306,13 @@ video {
         right: 25px;
     }
 }
+
+/** Theme standards */
+
+.post-content a, .post-meta a, .post-footer a {
+    text-decoration: underline;
+}
+
+#comments a {
+    text-decoration: underline;
+}
